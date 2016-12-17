@@ -34,7 +34,7 @@ public class DataActivity extends AppCompatActivity implements View.OnClickListe
         intent.putExtra("name", text.getText().toString());
         // ustawiamy rezultat - czy sie powiódł i dane czyli intent
         setResult(Activity.RESULT_OK, intent);
-        // żeby zadziałało kończymy tutaj activity chyba :)
+        // żeby zadziałało zwracanie rezutatu kończymy tutaj activity
         finish();
     }
 }
