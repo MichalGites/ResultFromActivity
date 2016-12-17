@@ -28,7 +28,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     // metoda dziedziczona z activity obsugująca rezultat z innego activity np.
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode==0){// sprawdzamy który rezultat do nas przyszedl po id - 0 ustawilismy
+        if (requestCode==0){// sprawdzamy który rezultat do nas przyszedl po id - 0 ustawilismy przy uruchamianiu
+            // moze byc kilka rezulltatów w innym activity, wtedy kopiujemy pierwszego ifa i obslugujemy identycznie inny rezultat
             if (resultCode== Activity.RESULT_OK){// jeżeli rezultat jest prawidłowy to wyświetlamy dane
                 Toast.makeText(this, data.getStringExtra("name"), Toast.LENGTH_SHORT).show();
             }else{// jeśi rezultat jest nieprawidłowy to wyświetamy sobie że wystąpił błąd - robione jako else
